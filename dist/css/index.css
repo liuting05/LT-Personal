@@ -3,22 +3,66 @@ body{
 	width: 100%;
 	background-color: #fff;
 }
+.big-content{
+	width: 1024px;
+	margin: auto;
+}
+@media screen and (max-width: 990px){
+    .big-content{
+    	width: 100%;
+    }
+}
 #datum{
 	/*background-color: red;
 	width: 80%;
 	height: 100px; */
 	width: 100%;
 	margin: auto;
-	
+	position: relative;
+	height: 290px;
+}
+#background{
+	background: url('../img/foreground01.png') 5% 5%,
+    url('../img/midground01.png') 20% 20%,
+    url('../img/background01.png') 90% 110%;
+    -webkit-background-size: 150px;
+    background-size: 150px;
+    top: 0;
+    left: 0;
+	right: 0;
+	bottom: 0;
+	position: absolute;
+	height: 200px;
+  	-webkit-transition: left 300s linear;
+  	-webkit-transform: left 300s linear;
+  	-moz-transform: left 300s linear;
+  	-ms-transform: left 300s linear;
+  	-o-transform: left 300s linear;
+  	transform: left 300s linear;
+}
+
+#datum:target #background {
+  left: -5000px;
+}
+
+#datum:hover #background {
+  left: -9999px;
 }
 #datum .datum_content{
 	text-align: center;
 	/* background: url("../img/006.jpg")no-repeat left center;
 	-webkit-background-size: 100% 100%;
 	background-size: 100% 100%; */
-	background: -moz-linear-gradient(top, #30dacc, rgba(255, 255, 255, 1));  
-	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#30dacc), to(rgba(255, 255, 255, 1)));
+	/* background: -moz-linear-gradient(top, #30dacc, rgba(255, 255, 255, 1));  
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#30dacc), to(rgba(255, 255, 255, 1))); */
 	padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 50px;
+    z-index: 11;
+    height: 200px;
 }
 #datum .datum_content p{
 	margin: 5px 0;
@@ -27,65 +71,65 @@ body{
 }
 #datum .datum_content p:nth-child(3) img{
 	border-radius: 100px;
-	width: 80px;
-	height: 80px;
+	width: 100px;
+	height: 100px;
 	margin: 15px 0;
 }
 #datum .datum_content p:nth-child(4){
 	color: #3f3f3f;
 	font-size: 18px;
 }
-#datum .datum_list{
+.datum_list{
 	padding: 0 10px;
 }
-#datum .datum_list ul{
+.datum_list ul{
 	margin: 0;
 	padding: 15px 0;
 	list-style: none;
 	overflow: hidden;
 }
-#datum .datum_list ul li{
+.datum_list ul li{
 	float: left;
 	width: 50%;
 	padding: 0 10px;
 	margin: 5px 0;
 }
-#datum .datum_list ul li span{
+.datum_list ul li span{
 	display: block;
 	color: #000;
 	padding-left: 20px;
 }
-#datum .datum_list ul li:nth-child(1) span{
+.datum_list ul li:nth-child(1) span{
 	background: url("../img/demoIcon04.png")no-repeat left center;
 	-webkit-background-size: 20px;
 	background-size: 20px;
 }
-#datum .datum_list ul li:nth-child(2) span{
+.datum_list ul li:nth-child(2) span{
 	background: url("../img/demoIcon02.png")no-repeat left center;
 	-webkit-background-size: 20px;
 	background-size: 20px;
 }
-#datum .datum_list ul li:nth-child(3) span{
+.datum_list ul li:nth-child(3) span{
 	background: url("../img/demoIcon03.png")no-repeat left center;
 	-webkit-background-size: 20px;
 	background-size: 20px;
 }
-#datum .datum_list ul li:nth-child(4) span{
+.datum_list ul li:nth-child(4) span{
 	background: url("../img/demoIcon04.png")no-repeat left center;
 	-webkit-background-size: 20px;
 	background-size: 20px;
 }
-#datum .datum_list ul li:nth-child(5) span{
+.datum_list ul li:nth-child(5) span{
 	background: url("../img/demoIcon02.png")no-repeat left center;
 	-webkit-background-size: 20px;
 	background-size: 20px;
 }
-#datum .datum_list ul li:nth-child(6) span{
+.datum_list ul li:nth-child(6) span{
 	background: url("../img/demoIcon04.png")no-repeat left center;
 	-webkit-background-size: 20px;
 	background-size: 20px;
 }
-#datum .datum_list ul li:nth-child(7) span{
+.datum_list ul li:nth-child(7) span{
 	background: url("../img/demoIcon03.png")no-repeat left center;
 	-webkit-background-size: 20px;
 	background-size: 20px;
